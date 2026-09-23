@@ -30,6 +30,19 @@ Responder, de forma reproduzível, às seguintes perguntas:
 - `analise_abrasel.ipynb`: análise completa, organizada em seis etapas.
 - `requirements.txt`: dependências Python do projeto.
 
+## Arquivos de dados e Git
+
+Os arquivos `empresa1.csv` e `estabelecimento1.csv` são grandes e, por isso, a pasta `data/raw/` está listada no `.gitignore`. Dessa forma, os dados brutos não são enviados ao repositório Git nem incluídos no histórico de versões.
+
+Para executar o notebook em outra máquina, é necessário disponibilizar localmente esses dois arquivos dentro de `data/raw/`, mantendo exatamente estes nomes:
+
+```text
+data/raw/empresa1.csv
+data/raw/estabelecimento1.csv
+```
+
+Os arquivos tratados e menores são gerados em `data/processed/` após a execução do notebook.
+
 ## Metodologia
 
 1. Leitura dos CSVs sem cabeçalho, separados por `;`, com codificação `latin1`.
